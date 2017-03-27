@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue中文论坛</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <style type="text/css">
+      .alert-enter-active, .alert-leave-active {
+        transition: opacity .5s
+      }
+      .alert-enter, .alert-leave-active {
+        opacity: 0
+      }    
+    </style>
+  </head>
+  <body>
+    <div id="app" style="height: 100%">
+      <transition name="alert">
+        <v-alert v-show="alertshow" @alertshow="alertshow=true" @alerthidden="alertshow=false"></v-alert>
+      </transition>
+      <router-view></router-view>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
